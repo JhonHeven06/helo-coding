@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">Brand</div>
+      <div>
+        <a href="#about">Biodata</a>
+        <a href="#portfolio">Portfolio</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Selamat Datang di Website Saya</h1>
+      <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+      <button>Pelajari Lebih Lanjut</button>
+    </div>
+    <div>
+      <img src="fotoku hehehe.jpg" alt="Foto Profil">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>A brief introduction about myself</p>
+    <div class="about-me">
+      <div><strong>Full Name:</strong> Dodi</div>
+      <div><strong>Education:</strong> S1 Informatika</div>
+      <div><strong>Pekerjaan:</strong> Programmer</div>
+      <div><strong>Contact:</strong> dodi@example.com</div>
+      <div><strong>Hobi:</strong> Membaca, Coding</div>
+      <div><strong>Alamat:</strong> Jakarta</div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Portofolio</h2>
+    <div class="portfolio-items">
+      <div>
+        <img src="foto portofolio.jpg" alt="Proyek 1">
+        <p>Proyek 1 - Deskripsi proyek 1</p>
+      </div>
+      <div>
+        <img src="Mini project 2 special skill.jpg" alt="Proyek 2">
+        <p>Proyek 2 - Deskripsi proyek 2</p>
+      </div>
+      <div>
+        <img src="mini task 3 special skill.jpg" alt="Proyek 3">
+        <p>Proyek 3 - Deskripsi proyek 3</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Dodi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
