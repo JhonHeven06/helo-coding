@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Biodata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #f0f0f0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero img {
+            width: 400px;
+            height: auto;
+        }
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+        .biodata table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .biodata td {
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+            width: 33%;
+        }
+        .portfolio {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .portfolio-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Menu -->
+    <header>
+        <div class="brand">Brand</div>
+        <nav>
+            <a href="#hero">Header</a>
+            <a href="#biodata">Biodata</a>
+            <a href="#portfolio">Portofolio</a>
+        </nav>
+    </header>
+
+    <!-- Section 2: Judul di kiri, gambar di kanan -->
+    <div class="hero" id="hero">
+        <div class="hero-text">
+            <h1>Selamat Datang di Website Saya</h1>
+            <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+            <button>Pelajari Lebih Lanjut</button>
+        </div>
+        <img src="https://via.placeholder.com/600x400" alt="Hero Image">
+    </div>
+
+    <!-- Section 3: Biodata dengan 6 box (HTML Table) -->
+    <section class="biodata" id="biodata">
+        <h2>About Me</h2>
+        <p>A brief introduction about myself</p>
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td>Education</td>
+                <td>Pekerjaan</td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td>Hobi</td>
+                <td>Alamat</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Section 4: Portofolio -->
+    <section class="portfolio" id="portfolio">
+        <h2>Portofolio</h2>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/350x200" alt="Proyek 1">
+                <h3>Proyek 1</h3>
+                <p>Deskripsi proyek 1.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/350x200" alt="Proyek 2">
+                <h3>Proyek 2</h3>
+                <p>Deskripsi proyek 2.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/350x200" alt="Proyek 3">
+                <h3>Proyek 3</h3>
+                <p>Deskripsi proyek 3.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
