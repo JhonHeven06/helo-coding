@@ -1,0 +1,22 @@
+
+CREATE DATABASE ecommerce;
+
+
+USE ecommerce;
+
+
+CREATE TABLE produk (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    harga INT NOT NULL,
+    kategori VARCHAR(50) NOT NULL,
+    deskripsi TEXT
+);
+
+INSERT INTO produk (nama, harga, kategori, deskripsi) VALUES
+('Laptop ASUS', 7500000, 'Elektronik', 'Laptop untuk kerja dan gaming'),
+('Smartphone Samsung', 3500000, 'Elektronik', 'HP Android dengan kamera bagus'),
+('Kaos Polos', 75000, 'Fashion', 'Kaos nyaman dipakai sehari-hari'),
+('Sepatu Sneakers', 250000, 'Fashion', 'Sepatu casual untuk jalan santai'),
+('Nasi Goreng Spesial', 20000, 'Makanan', 'Nasi goreng spesial dengan telur'),
+('Burger Jumbo', 35000, 'Makanan', 'Burger besar dengan daging sapi premium');
