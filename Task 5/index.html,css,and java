@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Sederhana</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .filter {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    select {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .price {
+      color: green;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Daftar Produk</h1>
+
+  <!-- Filter -->
+  <div class="filter">
+    <label for="filterKategori">Filter Kategori: </label>
+    <select id="filterKategori">
+      <option value="all">Semua</option>
+      <option value="Elektronik">Elektronik</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Makanan">Makanan</option>
+    </select>
+  </div>
+
+  <!-- Container Produk -->
+  <div class="container" id="produkContainer"></div>
+
+  <script>
+    // Array Data Produk
+    const produk = [
+      {
+        nama: "Laptop Gaming",
+        harga: 12000000,
+        deskripsi: "Laptop dengan performa tinggi untuk gaming dan multitasking.",
+        gambar: "Victus 15.jpeg",
+        kategori: "Elektronik"
+      },
+      {
+        nama: "Smartphone",
+        harga: 5000000,
+        deskripsi: "Smartphone canggih dengan kamera berkualitas.",
+        gambar: "iPhone 11.jpeg",
+        kategori: "Elektronik"
+      },
+      {
+        nama: "Kaos Polos",
+        harga: 75000,
+        deskripsi: "Kaos polos nyaman dan modis.",
+        gambar: "kaos polos hitam.jpeg",
+        kategori: "Fashion"
+      },
+      {
+        nama: "Celana Jeans",
+        harga: 150000,
+        deskripsi: "Celana jeans keren dan awet.",
+        gambar: "celana jeans.jpeg",
+        kategori: "Fashion"
+      },
+      {
+        nama: "Nasi Goreng",
+        harga: 25000,
+        deskripsi: "Nasi goreng spesial dengan topping lengkap.",
+        gambar: "special nasi goreng.jpeg",
+        kategori: "Makanan"
+      },
+      {
+        nama: "Burger",
+        harga: 30000,
+        deskripsi: "Burger lezat dengan daging sapi asli.",
+        gambar: "burger.jpeg",
+        kategori: "Makanan"
+      }
+    ];
+
+    const container = document.getElementById("produkContainer");
+    const filterSelect = document.getElementById("filterKategori");
+
+    // Fungsi menampilkan produk
+    function tampilkanProduk(filter) {
+      container.innerHTML = ""; // kosongkan isi
+      produk.forEach(item => {
+        if (filter === "all" || item.kategori === filter) {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.innerHTML = `
+            <img src="${item.gambar}" alt="${item.nama}">
+            <h3>${item.nama}</h3>
+            <p class="price">Rp ${item.harga.toLocaleString()}</p>
+            <p>${item.deskripsi}</p>
+            <small>Kategori: ${item.kategori}</small>
+          `;
+          container.appendChild(card);
+        }
+      });
+    }
+
+    // Event filter
+    filterSelect.addEventListener("change", (e) => {
+      tampilkanProduk(e.target.value);
+    });
+
+    // Pertama kali load tampilkan semua
+    tampilkanProduk("all");
+  </script>
+
+</body>
+</html>
