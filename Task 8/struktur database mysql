@@ -1,0 +1,17 @@
+CREATE DATABASE ecommerce;
+
+USE ecommerce;
+
+CREATE TABLE produk (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100),
+    harga INT,
+    kategori VARCHAR(50),
+    deskripsi TEXT
+);
+
+-- Contoh data
+INSERT INTO produk (nama, harga, kategori, deskripsi) VALUES
+('Laptop ASUS', 7500000, 'Elektronik', 'Laptop untuk kerja dan gaming'),
+('Kaos Polos', 75000, 'Fashion', 'Kaos nyaman dipakai sehari-hari'),
+('Nasi Goreng', 20000, 'Makanan', 'Nasi goreng spesial dengan telur');
